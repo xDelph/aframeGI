@@ -10,11 +10,8 @@
 
     <title>aframe GoogleImage</title>
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+    <script src="/lib/axios.min.js"></script>
     <script src="/lib/aframe.min.js"></script>
-    <!-- <script src="https://unpkg.com/aframe-position-spherical-component/index.js"></script> -->
-    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
 
     <script src="/entities/customImage.js"></script>
 
@@ -22,13 +19,13 @@
   </head>
   <body>
     <a-scene cursor="rayOrigin: mouse">
-      <!-- <a-entity environment="preset: starry; ground: none; dressingAmount: 500"></a-entity> -->
       <a-assets>
         <img id="background" src="/static/background.jpg" />
       </a-assets>
       <a-sphere radius="11" material="side: back; src: #background"></a-sphere>
     </a-scene>
 
+    <script src="./js/loadJson.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

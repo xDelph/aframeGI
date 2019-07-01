@@ -51,14 +51,15 @@ async function getImage (req, res) {
   const { url } = req.query
   try {
     const response = await axios.get(url, { responseType: 'arraybuffer' })
-    res.send(`data:image/jpeg;base64,${Buffer.from(response.data, 'binary').toString('base64')}`)
+
+    res.end(Buffer.from(response.data, 'binary'), 'binary')
   } catch (err) {
     console.error(err.message || err) // eslint-disable-line no-console
+    res.send('nok')
   }
 }
 
 async function queryGoogle (req, res) {
-  console.log(req)
   const { query } = req.body
 
   res.setHeader('Content-Type', 'application/json')
