@@ -8,7 +8,7 @@ const scene = document.querySelector('a-scene')
 
       customImage.setAttribute('custom-image', { width: images[i].width, height: images[i].height, num: i })
       customImage.setAttribute('radius', 10)
-      customImage.setAttribute('src', `${origin}:3000/api/image?url=${images[i].src}`)
+      customImage.setAttribute('src', `${origin}/api/image?url=${images[i].src}`)
 
       scene.appendChild(customImage)
     }

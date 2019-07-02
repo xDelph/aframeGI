@@ -7,7 +7,7 @@ const api = require('./api')
 const app = express()
 
 // set the port
-app.set('port', process.env.PORT || 3000)
+app.set('port', process.env.PORT || 8080)
 
 // enable cors
 app.use(function (req, res, next) {
