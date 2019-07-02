@@ -1,8 +1,8 @@
 window.AFRAME.registerComponent('custom-image', {
   schema: {
-    width: { type: 'number' },
-    height: { type: 'number' },
-    num: { type: 'number' }
+    width: { type: 'number', default: 0 },
+    height: { type: 'number', default: 0 },
+    num: { type: 'number', default: 0 }
   },
 
   getGeometry: function () {
